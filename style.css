@@ -1,0 +1,480 @@
+@font-face {
+    font-family: neue-b;
+    src: url(./media/font/NHaasGroteskTXPro-75Bd.ttf);
+}
+
+@font-face {
+    font-family: neue-m;
+    src: url(./media/font/NHaasGroteskTXPro-65Md.ttf);
+}
+
+@font-face {
+    font-family: neue-r;
+    src: url(./media/font/NHaasGroteskTXPro-55Rg.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neue-r;
+
+}
+
+.page-1 {
+    background-color: #EFEAE3;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 0 2rem;
+    
+
+
+}
+
+.navigation-container {
+    width: 100%;
+    padding-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.nav-item h4 {
+    
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: 1px solid #b3b3b3;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.6s;
+    overflow: hidden;
+   
+    
+}
+
+.nav-item h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.9s;
+    border-radius: 100%;
+    
+}
+
+.nav-item h4:hover::after{
+    bottom: 0;
+    border-radius: 50px;
+ 
+}
+
+.nav-item h4 a {
+    text-decoration: none;
+    color: rgba(43, 41, 41, 0.801);
+    position: relative;
+    z-index: 9;
+    letter-spacing: -1.5px;
+    
+}
+
+.nav-item h4:hover a{
+    color: white;
+
+   
+
+}
+
+
+
+
+.center {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #BFBBB6;
+    padding-bottom: 4rem;
+
+}
+
+.left h3{
+    width: 28vw;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    word-spacing: -4px;
+}
+
+.right h1 {
+    font-family: neue-b;
+    font-size: 9rem;
+    line-height: 7.5rem;
+    text-align: right;
+}
+
+.page-1 video {
+    width: 100%;
+    border-radius: 1.5rem;
+    margin-top: 3.5rem;
+    position: relative;
+}
+
+.hero-shape {
+    position: absolute;
+    right: 0;
+    top: 35rem;
+    width: 38rem;
+    height: 25rem;
+    
+}
+
+.animated-shape1 {
+    width: 100%;
+    height: 100%;
+    background-color: #FE320A;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(20px);  
+    position: absolute;
+    
+}
+
+.animated-shape2 {
+    width: 25rem;
+    height: 25rem;
+    background: linear-gradient(#ff520e,#FE320A);
+    border-radius: 50%;
+    filter: blur(20px);  
+    position: absolute;
+    animation-name: animate1;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+
+}
+
+.animated-shape3 {
+    width: 20rem;
+    height: 25rem;
+    background: linear-gradient(#ff520e,#FE320A);
+    border-top-right-radius: 10%;
+    border-top-left-radius: 100%;
+    /* border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%; */
+    filter: blur(20px);  
+    position: absolute;
+    right: 5px;
+    animation-name: animate2;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes animate1 {
+    from{
+        transform: translate(20%,-15%);
+    }
+    to{
+        transform: translate(10%,0%);
+    }
+    
+}
+
+@keyframes animate2 {
+    from{
+        transform: translate(1%,1%);
+    }
+    to{
+        transform: translate(1%,-25%);
+    }
+    
+}
+
+.page-2 {
+    background-color: #EFEAE3;
+    width: 100%;
+    min-height: 100vh;
+    padding: 6rem 0 2rem 0;
+    position: relative;
+}
+
+.container {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.moving-text {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.moving-text h1 {
+    font-size: 8rem;
+    letter-spacing: -3px;
+    font-family: neue-b;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.gola {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #FE320A;
+    display: inline-block;
+    margin: 0.5rem 1.5rem;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.page-2-bottom {
+    height: 50rem;
+    width: 100%;
+    padding: 7rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    
+
+}
+
+.page-2-bottom h1 {
+    font-size: 3.8rem;
+    font-family: neue-b;
+    font-weight: 500;
+    letter-spacing: -3px;
+    word-spacing: -3px;
+    width: 60%;
+    line-height: 65px;
+}
+
+.bottom-part2-image {
+    width: 24%;
+    padding-top: 240px;
+
+    
+}
+
+.bottom-part2-image img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.bottom-part2-image p {
+    font-family: neue-r;
+    font-size: .9rem;
+    font-weight: 100;
+    line-height: 22px;
+}
+
+.animated-circle {
+    height: 32rem;
+    width: 32rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background: linear-gradient(to top right,#fe330aec,#ff520ee8);
+    filter: blur(25px);
+    animation-name: animated-circle;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes animated-circle {
+    from {
+        transform: translate(10%,-10%) skew(0deg);
+    }
+    to {
+        filter: blur(50%);
+        transform: translate(-10%,10%) skew(-12deg);
+    }
+    
+}
+
+
+
+
+
+
+
+.page-3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 2rem 0;
+}
+
+.ul {
+    padding: 0 3rem 4rem 3rem;
+    color: #272626;
+    font-size: .8rem;
+   
+  
+
+}
+
+.ul li::marker {
+    color: #FE320A;
+    font-size: 32px;
+
+
+    
+}
+
+.elem {
+    height: 120px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border-bottom: 1px solid rgba(139, 126, 126, 0.555);
+    overflow: hidden;
+
+}
+
+.elem-right {
+    text-align: right;
+}
+.elem-right h5 {
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.89);
+    position: relative;
+    z-index: 9;
+}
+.elem-right p {
+    font-size: 0.9rem;
+    color: #918f8f;
+    position: relative;
+    z-index: 9;
+}
+
+.elem h1 {
+    font-family: neue-b;
+    font-weight: 400;
+    font-size: 3rem;
+    word-spacing: -5px;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 9;
+}
+
+.overly {
+    width: 100%;
+    height: 100%;
+    background-color: #FF9831;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease-in-out 0.09s;
+}
+
+.elem:hover .overly {
+    top: 0px;
+}
+
+.all-projects {
+    padding: 4rem 2rem;
+}
+
+.all-projects span {
+    padding-left: 1rem;
+}
+
+.all-projects h4 {
+    width: 13rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border: 1px solid #b3b3b3;
+    padding: .5rem 2rem;
+    border-radius: 50px;
+    position: relative;
+    transition: all ease 0.6s;
+    overflow: hidden;
+   
+   
+    
+}
+
+.all-projects h4::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    transition: all ease 0.9s;
+    border-radius: 100%;
+    
+}
+
+.all-projects h4:hover::after{
+    bottom: 0;
+    border-radius: 50px;
+ 
+}
+
+.all-projects h4 a {
+    text-decoration: none;
+    color: rgba(43, 41, 41, 0.801);
+    position: relative;
+    z-index: 9;
+    letter-spacing: -1px;
+    
+}
+
+.all-projects h4:hover a{
+    color: white;
+
+   
+
+}
+
+.page-4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+}

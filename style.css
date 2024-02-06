@@ -344,21 +344,25 @@
     padding: 2rem 0;
 }
 
-.ul {
-    padding: 0 3rem 4rem 3rem;
-    color: #272626;
-    font-size: .8rem;
-   
-  
-
+.featured-heading {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
 }
 
-.ul li::marker {
-    color: #FE320A;
-    font-size: 32px;
+.red-dot {
+    width: .6rem;
+    height: .6rem;
+    background-color: #FE320A;
+    border-radius: 100%;
+}
 
-
-    
+.featured-heading p {
+    text-transform: uppercase;
+    color: #0b0500;
+    font-size: .85rem;
 }
 
 .elem {
@@ -477,4 +481,60 @@
     min-height: 100vh;
     width: 100%;
     background-color: #EFEAE3;
+    padding: 2rem;
+  
+}
+
+
+.page4-main {
+    width: 100%;
+    height: 50rem;
+    background-color: black;
+    border-radius: 25px;
+    position: relative;
+}
+
+.left-side {
+    position: absolute;
+    top: 10rem;
+    left: 9rem;
+}
+
+.headings h1 a {
+    color: rgba(99, 96, 96, 0.781);
+    font-size: 4rem;
+    text-decoration: none;
+    line-height: 4.2rem;
+    
+}
+
+.headings h1 a:hover {
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 4.5rem;
+    text-decoration: none;
+    
+    
+}
+
+.headings p {
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 1rem;
+    text-align: left;
+    width: 20rem;
+    padding-top: 3rem;
+    
+    
+}
+
+
+
+
+.right-side img {
+    position: absolute;
+    right: 0px;
+    border-radius: 25px;
+    width: 55%;
+    height: 50rem;
+    object-fit: cover;
+    
 }
